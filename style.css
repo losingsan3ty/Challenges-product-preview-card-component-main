@@ -1,0 +1,208 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* General css */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+:root {
+  --ff-sans: "Montserrat", sans-serif;
+  --ff-serif: "Fraunces", serif;
+  --primaryColor: hsl(158, 36%, 37%);
+  --primaryColorDarker: hsl(159, 36%, 18%);
+  --backgroundColor: hsl(30, 38%, 92%);
+  --mainDark: hsl(212, 21%, 14%);
+  --mainGray: hsl(228, 12%, 48%);
+  --mainWhite: hsl(0, 0%, 100%);
+  --mainSpacing: 1.2rem;
+  --doubleMainSpacing: 2.4rem;
+  --fs-xl: 3.3rem;
+  --fs-600: 2.986rem;
+  --fs-500: 2.488rem;
+  --fs-450: 2.074rem;
+  --fs-400: 1.44rem;
+  --fs-s: 1.3rem;
+  --fs-xs: 1.2rem;
+}
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  overflow-x: hidden;
+}
+/* Set core body defaults */
+
+body {
+  font-family: var(--ff-sans);
+  text-rendering: optimizeSpeed;
+  font-size: var(--fs-400);
+  background-color: var(--backgroundColor);
+  line-height: 1.8;
+  color: var(--mainGray);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+ul {
+  list-style: none;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* phone  */
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.grid {
+  display: grid;
+  align-items: center;
+  justify-items: start;
+}
+.grid-cols {
+  grid-template-columns: 1fr;
+}
+.container {
+  max-width: 34rem;
+  margin: 0 auto;
+}
+/*
+font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.986 / 3.583 / 4.3 / 5.16 /  6.192 /  7.43 / 
+8.916
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+/* card */
+.card {
+  flex-direction: column;
+  margin: var(--doubleMainSpacing) 0;
+  background-color: var(--mainWhite);
+  border-radius: 1rem;
+}
+.card-img img {
+  border-radius: 1rem 1rem 0 0;
+}
+.card-content {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.primary-heading {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-xl);
+  color: var(--mainDark);
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-bottom: var(--mainSpacing);
+  font-weight: 700;
+}
+.sub-heading {
+  font-size: var(--fs-s);
+  margin: var(--doubleMainSpacing) 0 0.8rem 0;
+  letter-spacing: 0.4rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.card-description {
+  margin-bottom: var(--mainSpacing);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.price {
+  gap: var(--doubleMainSpacing);
+}
+.card-curr-price {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-xl);
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+.card-prev-price {
+  font-size: var(--fs-s);
+
+  text-decoration: line-through;
+}
+.btn {
+  font-size: var(--fs-s);
+  gap: var(--mainSpacing);
+  color: var(--mainWhite);
+  background-color: var(--primaryColor);
+  padding: var(--mainSpacing) 9.6rem;
+  border-radius: 1rem;
+  margin: var(--mainSpacing) 0 var(--doubleMainSpacing) 0;
+}
+.btn button {
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
+.btn:active {
+  background-color: var(--primaryColorDarker);
+}
+/* desktop */
+@media only screen and (min-width: 1440px) {
+  .grid-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}
