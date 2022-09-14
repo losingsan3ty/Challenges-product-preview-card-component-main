@@ -28,7 +28,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./images//DesktopLayout.JPG)
-
+![](./images/MobileLayout.png)
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/html-and-basic-css-solution-mobilefirst-2eDXSbDT6w]
