@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images//DesktopLayout.JPG)
+![](./images/DesktopLayout.JPG)
 ![](./images/MobileLayout.png)
 ### Links
 
