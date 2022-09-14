@@ -19,21 +19,17 @@ a:visited {
 :root {
   --ff-sans: "Montserrat", sans-serif;
   --ff-serif: "Fraunces", serif;
-  --primaryColor: hsl(158, 36%, 37%);
-  --primaryColorDarker: hsl(159, 36%, 18%);
-  --backgroundColor: hsl(30, 38%, 92%);
-  --mainDark: hsl(212, 21%, 14%);
-  --mainGray: hsl(228, 12%, 48%);
-  --mainWhite: hsl(0, 0%, 100%);
-  --mainSpacing: 1.2rem;
-  --doubleMainSpacing: 2.4rem;
-  --fs-xl: 3.3rem;
-  --fs-600: 2.986rem;
-  --fs-500: 2.488rem;
-  --fs-450: 2.074rem;
-  --fs-400: 1.44rem;
+  --clr-primary: hsl(158, 36%, 37%);
+  --clr-primary-darker: hsl(159, 36%, 18%);
+  --clr-background: hsl(30, 38%, 92%);
+  --clr-dark: hsl(212, 21%, 14%);
+  --clr-gray: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  --spacing-primary: 1.2rem;
+  --spacing-double-primary: 2.4rem;
+  --fs-l: 3.3rem;
+  --fs-m: 1.44rem;
   --fs-s: 1.3rem;
-  --fs-xs: 1.2rem;
 }
 /* - Mobile: 375px
 - Desktop: 1440px */
@@ -60,10 +56,10 @@ body {
 body {
   font-family: var(--ff-sans);
   text-rendering: optimizeSpeed;
-  font-size: var(--fs-400);
-  background-color: var(--backgroundColor);
-  line-height: 1.8;
-  color: var(--mainGray);
+  font-size: var(--fs-m);
+  background-color: var(--clr-background);
+  line-height: 1.6;
+  color: var(--clr-gray);
 }
 
 /* A elements that don't have a class get default styles */
@@ -114,12 +110,10 @@ ul {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .grid {
   display: grid;
-  align-items: center;
-  justify-items: start;
 }
 .grid-cols {
   grid-template-columns: 1fr;
@@ -135,47 +129,50 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 */
 /* card */
 .card {
-  flex-direction: column;
-  margin: var(--doubleMainSpacing) 0;
-  background-color: var(--mainWhite);
+  margin: var(--spacing-double-primary) 0;
+  background-color: var(--clr-white);
   border-radius: 1rem;
 }
 .card-img img {
   border-radius: 1rem 1rem 0 0;
 }
 .card-content {
-  /* width: 88%; */
-  /* margin: 0 var(--doubleMainSpacing); */
+  width: 87.1%;
+  row-gap: var(--spacing-primary);
+  margin: 0 auto;
 }
 
 .primary-heading {
   font-family: var(--ff-serif);
-  font-size: var(--fs-xl);
-  color: var(--mainDark);
+  font-size: var(--fs-l);
+  color: var(--clr-dark);
+
   letter-spacing: -0.5px;
   line-height: 1;
-  margin-bottom: var(--mainSpacing);
   font-weight: 700;
 }
 .sub-heading {
   font-size: var(--fs-s);
-  margin: var(--doubleMainSpacing) 0 0.8rem 0;
+  margin-top: var(--spacing-double-primary);
   letter-spacing: 0.4rem;
   line-height: 1.5;
   text-transform: uppercase;
 }
 .card-description {
-  margin-bottom: var(--mainSpacing);
   font-size: 1.4rem;
   font-weight: 500;
+
+  margin: 0.4rem 0;
 }
 .price {
-  gap: var(--doubleMainSpacing);
+  gap: var(--spacing-double-primary);
+  margin: var(--spacing-primary) 0;
+  justify-content: flex-start;
 }
 .card-curr-price {
   font-family: var(--ff-serif);
-  font-size: var(--fs-xl);
-  color: var(--primaryColor);
+  font-size: var(--fs-l);
+  color: var(--clr-primary);
   line-height: 1;
 }
 .card-prev-price {
@@ -185,12 +182,13 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 }
 .btn {
   font-size: var(--fs-s);
-  gap: var(--mainSpacing);
-  color: var(--mainWhite);
-  background-color: var(--primaryColor);
-  padding: var(--mainSpacing) 9.6rem;
+  gap: var(--spacing-primary);
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  width: 100%;
+  padding: calc(var(--spacing-primary) + 0.2rem) 0;
   border-radius: 1rem;
-  margin: var(--mainSpacing) 0 var(--doubleMainSpacing) 0;
+  margin-bottom: var(--spacing-double-primary);
 }
 .btn button {
   color: inherit;
@@ -198,11 +196,24 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   border: none;
 }
 .btn:active {
-  background-color: var(--primaryColorDarker);
+  background-color: var(--clr-primary-darker);
 }
 /* desktop */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 90em) {
+  .container {
+    max-width: 60rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+  }
+  .card-content {
+    width: 80.6%;
+  }
   .grid-cols {
     grid-template-columns: 1fr 1fr;
+  }
+  .card-img img {
+    border-radius: 1rem 0 0 1rem;
   }
 }
