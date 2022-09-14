@@ -33,46 +33,48 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="card grid grid-cols">
-        <div class="card-img">
-          <picture>
-            <source
-              media="(max-width: 89.999em)"
-              srcset="images/image-product-mobile.jpg"
-            />
-            <source
-              media="(min-width: 90em)"
-              srcset="images/image-product-desktop.jpg"
-            />
-            <img src="images/image-product-mobile" alt="defualt image" />
-          </picture>
-        </div>
-        <div class="card-content grid">
-          <p class="sub-heading">perfume</p>
-          <h1 class="primary-heading">Gabrielle Essence Eau De Parfum</h1>
-          <p class="card-description">
-            A floral, solar and voluptuous interpretation composed by Olivier
-            Polge, Perfumer-Creator for the House of CHANEL.
-          </p>
-          <div class="flex price">
-            <span class="card-curr-price">$149.99</span>
-            <span class="card-prev-price">$169.99</span>
+    <main>
+      <div class="container">
+        <div class="card grid grid-cols">
+          <div class="card-img">
+            <picture>
+              <source
+                media="(max-width: 59.999em)"
+                srcset="images/image-product-mobile.jpg"
+              />
+              <source
+                media="(min-width: 60em)"
+                srcset="images/image-product-desktop.jpg"
+              />
+              <img src="images/image-product-mobile" alt="defualt image" />
+            </picture>
           </div>
-          <div class="flex">
-            <span class="btn flex">
-              <img src="./images/icon-cart.svg" alt="" />
-              <button href="">Add to Cart</button>
-            </span>
+          <div class="card-content grid">
+            <p class="sub-heading">perfume</p>
+            <h1 class="primary-heading">Gabrielle Essence Eau De Parfum</h1>
+            <p class="card-description">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+            <div class="flex price">
+              <span class="card-curr-price">$149.99</span>
+              <span class="card-prev-price">$169.99</span>
+            </div>
+            <div class="flex">
+              <span class="btn flex">
+                <img src="./images/icon-cart.svg" alt="" />
+                <a href="">Add to Cart</a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Adnan</a>.
-    </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Adnan</a>.
+      </div>
+    </main>
   </body>
 </html>
