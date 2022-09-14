@@ -144,8 +144,8 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   border-radius: 1rem 1rem 0 0;
 }
 .card-content {
-  width: 88%;
-  margin: 0 auto;
+  /* width: 88%; */
+  /* margin: 0 var(--doubleMainSpacing); */
 }
 
 .primary-heading {
@@ -176,7 +176,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   font-family: var(--ff-serif);
   font-size: var(--fs-xl);
   color: var(--primaryColor);
-  font-weight: 700;
+  line-height: 1;
 }
 .card-prev-price {
   font-size: var(--fs-s);
